@@ -2,11 +2,14 @@ function showPage(evt, content) {
   // Get the button content items and button items
   var buttonContentItems = document.querySelectorAll(".button-content-item");
   var buttonItems = document.querySelectorAll(".button-item");
+  var bContent = document.getElementById("twob");
 
   // Hide all button content items
   for (let i = 0; i < buttonContentItems.length; i++) {
     buttonContentItems[i].style.display = "none";
   }
+
+  bContent.style.display = "none";
 
   // Remove the "active" class from all button items
   for (let i = 0; i < buttonItems.length; i++) {
@@ -46,7 +49,7 @@ function toggleOneb() {
   if (aButton.checked) {
     aContent.style.display = "none";
     bContent.style.display = "block";
-  } else if (!aButtonButton.checked) {
+  } else if (!aButton.checked) {
     aContent.style.display = "block";
     bContent.style.display = "none";
   }
